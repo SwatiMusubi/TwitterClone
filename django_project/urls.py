@@ -20,6 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from users import views as users_views
 
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', auth_views.LoginView
@@ -39,6 +42,8 @@ urlpatterns = [
     path('profile/', users_views.profile, name='profile'),
     path('search/', users_views.SearchView, name='search'),
     path('', include('blog.urls')),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 if settings.DEBUG:
