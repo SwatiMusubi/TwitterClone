@@ -29,9 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','django-twitter-techis.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','django-twitter-techis.herokuapp.com']
 
 
 # Application definition
@@ -86,22 +86,13 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2lplrf77hnlj8',
-        'USER': 'ivpdjzlohqsukp',
-        'HOST': 'ec2-3-89-0-52.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'PASSWORD': 'dd072c1358b781755760ba4e034b768f596256e16cb50b1859d747629ad05c5c',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 django_heroku.settings(locals())
 
 
