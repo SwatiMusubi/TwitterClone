@@ -15,6 +15,8 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import django_heroku
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -95,11 +97,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd2lplrf77hnlj8',
         'USER': 'ivpdjzlohqsukp',
-        'HOST': 'ec2-52-203-27-62.compute-1.amazonaws.com',
+        'HOST': 'ec2-3-89-0-52.compute-1.amazonaws.com',
         'PORT': 5432,
         'PASSWORD': 'dd072c1358b781755760ba4e034b768f596256e16cb50b1859d747629ad05c5c',
     }
 }
+django_heroku.settings(locals())
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
