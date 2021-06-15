@@ -15,7 +15,7 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-import django_heroku
+# import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -31,7 +31,7 @@ SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','django-twitter-techis.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
     }
 }
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 
 REST_FRAMEWORK = {
