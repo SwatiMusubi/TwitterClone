@@ -1,1 +1,2 @@
-web: gunicorn Django-Twitter-Clone.wsgi
+web: gunicorn config.wsgi --log-file -
+
