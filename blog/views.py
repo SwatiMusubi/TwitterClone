@@ -158,7 +158,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['content', 'image']
+    fields = ['content','image']
     template_name = 'blog/post_new.html'
     success_url = '/'
 
